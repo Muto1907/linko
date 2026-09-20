@@ -85,7 +85,7 @@ func initializeLogger(logFileStr string) (*slog.Logger, closeFunc, error) {
 
 		handlers = append(
 			handlers,
-			slog.NewTextHandler(bufLogFile, &slog.HandlerOptions{
+			slog.NewJSONHandler(bufLogFile, &slog.HandlerOptions{
 				Level: slog.LevelInfo,
 			}),
 		)
